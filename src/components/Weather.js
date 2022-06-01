@@ -7,7 +7,7 @@ const Weather = () => {
   const [city, setCity] = useState("");
 
   const getWeather = (e) => {
-    const key = "1bcac83f621e71521a22e3aca7db6a3b";
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
     if (e.key === "Enter") {
       axios(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`
